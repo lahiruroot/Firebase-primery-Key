@@ -1,0 +1,23 @@
+Copy this code and past it on yor firebase database.
+
+Copy this code ------> Your fire base data console ------->Database ----->Real time database ------> Rules
+
+follow this path and past this code...
+
+you need to  change this ("$user_id") to your primery key data...
+
+__________________________________________________________________________________________________________________________________________
+
+{
+    "rules" : {
+        ".read" : true,
+        "boards" : {
+            "$user_id" : {
+                ".write" : "!data.parent().hasChild($user_id)"
+            }
+        }
+    }
+}  
+
+
+_________________________________________________________________________________________________________________________________________
